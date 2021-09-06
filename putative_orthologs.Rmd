@@ -1,0 +1,18 @@
+library(tidyverse)
+library(stringr)
+library(ggrepel)
+
+humandf <- read_tsv("human_biomart.txt")
+zfishdf <- read_tsv("zfish_biomart.txt")
+rbhdf <- read_tsv("Human_Zebrafish_RBH.tsv")
+
+names(humandf)[1] <- 'Human Gene ID' 
+names(humandf)[2] <- 'Human Chrom' 
+names(humandf)[3] <- 'Human Gene Start' 
+names(humandf)[4] <- 'Human Gene End' 
+
+names(zfishdf)[1] <- 'Zebrafish Gene ID'
+names(zfishdf)[2] <- 'Zebrafish Chrom'
+names(zfishdf)[3] <- 'Zebrafish Gene Start'
+names(zfishdf)[4] <- 'Zebrafish Gene End'
+
